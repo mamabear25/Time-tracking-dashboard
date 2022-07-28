@@ -1,0 +1,18 @@
+.container {
+    flex: 1 0 21%;
+    margin: 5px;
+    height: 150px;
+    background-color: blue;
+}
+
+.main-container {
+    display:flex;
+    flex-wrap: wrap;  
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
