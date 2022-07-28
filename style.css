@@ -1,13 +1,115 @@
-.container {
-    flex: 1 0 21%;
-    margin: 5px;
-    height: 150px;
-    background-color: blue;
+body {
+    background-color: #0f1424;
+    color: white;
+    font-family: Rubik, sans-serif;
 }
 
-.main-container {
-    display:flex;
-    flex-wrap: wrap;  
+.grid .card {
+    grid-gap: 0.5rem;
+    background-color: #1c1f4a;
+    border-radius: 0.7rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+.image {
+    width: 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.grid header .user-hero {
+    align-items: center;
+    background-color: #5847eb;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+}
+
+.grid header .time {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.grid header .time button {
+    background-color: transparent;
+    border: none;
+    color: #6f76c8;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.grid .card:before {
+    background-position: top -0.5rem right 1rem;
+    background-repeat: no-repeat;
+    border-radius: 0.7rem;
+    bottom: 2rem;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.grid .play:before {
+    background-color: #56c2e6;
+    background-image: url(/static/media/icon-play.e8d4e56….svg);
+}
+
+.grid .Study:before {
+    background-color: #ff5c7c;
+    background-image: url(/static/media/icon-work.a3f124e….svg);
+}
+
+.grid .work:before {
+    background-color: #ff5c7c;
+    background-image: url(/static/media/icon-work.a3f124e….svg);
+}
+
+.grid .Exercise:before {
+    background-color: #4bcf81;
+    background-image: url(/static/media/icon-work.a3f124e….svg);
+}
+
+.grid .Social:before {
+    background-color: #7535d3;
+    background-image: url(/static/media/icon-work.a3f124e….svg);
+}
+
+.grid .Self:before {
+    background-color: #f0c75a;
+    background-image: url(/static/media/icon-work.a3f124e….svg);
+}
+
+#main-container {
+    align-items: unset;
+    height: unset;
+    justify-content: unset;
+    padding: 4rem 1rem;
+}
+
+.grid {
+    grid-gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill,minmax(275px,1fr));
+    padding: 0 1rem;
+    width: 50%
+}
+
+.grid header {
+    background-color: #1c1f4a;
+    border-radius: 0.7rem;
 }
 
 .attribution { 
@@ -15,4 +117,14 @@
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    grid-row: 1/2 span;
 }
